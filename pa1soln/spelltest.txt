@@ -1,0 +1,7 @@
+this is a twest of SpellChecker.
+delete test heere
+add test anther 
+second twest on another line
+exchange test thrid 
+caps test IBM ibm
+caps test 2 Alfred alfred

@@ -1,0 +1,8 @@
+Solution for CS310 Programming Assignment 2
+Provided files:
+TestMap, TestMapPerf, AbstractMap, HashMap1
+Updated files:
+HashMap2.java: with added "private" as needed for proper encapsulation
+HashMap3.java: expected solution for get/put plus resize, to use ArrayList<Node> instead of Node lists in buckets
+HashMap4.java: get resize working for this
+HashMap5.java: entrySet converted too (not expected as part of pa2, just FYI)

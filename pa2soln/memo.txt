@@ -1,0 +1,64 @@
+memo.txt Thanks to Maha Akter for most of this
+Question 1) Discuss your experiences in writing these programs.  What was the hardest part for you?
+	    Are you now a hashing expert?
+	    Have you thought of any applications of hashing in problems you have seen outside this class?
+			
+Answer: This is the first time I looked into JDK code. JDK code helps me to understand why we should comment on a function for other developers.
+I got pretty good understanding on how  map and HashMap work internally, what is hashing function, how hashing function work 
+and differences among maps.it also helps me to understand when what type of map I should use.
+I would say I have pretty good understanding on hashing function now  and need to brush up often to become expert on hashing.
+I did not have any prior knowledge on hashing. I saw hashing function used in Set or HashSet as well.
+
+
+Question 2) Explain how JDK documentation for Map (or what else) guided you to decide which methods you needed to make private.
+Answer: JDK documentation mention the uses of the function. I was able to determine some functions can be private based on them not being
+listed in the documentation on JDK. I made those private and ran test cases to see if it throws any access error.
+I reverted access modifiers till there are no error during test cases execution.
+
+Question 3) Report on experiments with TestMapPerf, showing one final run's output.
+	    Does your data agree with the O(1) claim of hashing?
+	    How do your HashMap2 compare to JDK’s? 
+	    Did switching to SequentialSearchST hurt performance?
+	    How does JDK HashMap compare  to JDK TreeMap? 
+	    
+
+Question 4) Explain in your own words what it means that the keySet is a view on the JDK HashSet.
+Answer: The keySet is a set of keys, but these keys are not copies (clones) of the keys from the Map. 
+Instead, they are in a sense live-connected to keys in the Map, so that if someone deletes a key from the Map,
+the key will disappear from the keySet. 
+Answer:  (output from the solution project)
+
+Starting...
+reading ../../words
+Found 99171 lines
+Map type: java.util.HashMap
+      case         ms      #gets   time/get(us)
+         0        277   10000000          0.028
+         1        294   10000000          0.029
+         2        586   10000000          0.059
+
+reading ../../words
+Found 99171 lines
+Map type: java.util.TreeMap
+      case         ms      #gets   time/get(us)
+         0       1761   10000000          0.176
+         1       2187   10000000          0.219
+         2       2979   10000000          0.298
+
+reading ../../words
+Found 99171 lines
+testMap passed load test
+reading ../../words
+Found 99171 lines
+Map type: cs310.util.HashMap3
+      case         ms      #gets   time/get(us)
+         0        550   10000000          0.055
+         1        662   10000000          0.066
+         2        854   10000000          0.085
+
+maha@itserver6:~/cs310/pa2/bin$
+
+Yes, my output data agree with the O(1) claim of hashing
+HashMap4 took almost same amount of time as JDK map took.
+My data shows that TreeMap took a lot longer compare to JDK HashMap.
+

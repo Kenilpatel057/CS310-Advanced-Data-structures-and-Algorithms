@@ -1,0 +1,76 @@
+
+
+1.
+These programs were challenging to write but also very fun. With problems that are more 
+complicated I wish I could sit and think about then for a few days.
+ That is not the case with school work because in order to understand the 
+ problem I have to play with the code to figure out the best implementation 
+ for it. By the time the code is mounted and half way done then I can 
+ see the intricacies in the different objects and classes that make the code messy. 
+
+I used Eclipse and sometimes notepad. I developed on windows and debugged it locally.
+ The only problems I had were with packages. I was not calling the files correctly. 
+ The way of calling java files in packages seems quite messy.
+
+2.
+
+
+$ javac -d ../bin cs310/*.java 
+
+$ java cs310.Xref < BankAccount.java
+   Account: 1
+   BankAccount: 1, 3
+   String: 3, 10
+   _id: 3, 3
+   amt: 5, 6
+   bal: 3
+   balance: 5, 7, 11
+   class: 1
+   deposit: 6
+   getBalance: 7
+   id: 3, 9
+   implements: 1
+   int: 3, 3, 5, 5, 6, 7, 9, 11
+   name: 10
+   nm: 3
+   private: 9, 10, 11
+   public: 1, 3, 5, 6, 7
+   return: 5, 7
+   void: 6
+   withdraw: 5
+
+
+Windows
+
++---pa1
+¦   +---classes
+¦   ¦   +---cs310
+
+¦   +---src
+¦       +---cs310
+¦
+
+Unix
+
+11      ./pa1/classes/cs310
+12      ./pa1/classes
+15      ./pa1/src/cs310
+16     ./pa1/src
+30     ./pa1
+
+3. The Tokenizer uses only a few variables as it parses the incoming text,
+so less than 1000 bytes total, very small, O(1) vs. N.
+
+4. With O(N) words in the dictionary held in a HashSet<String>, loading the 
+dictionary Set takes O(1) for each add, O(N) in all. If a TreeSet<String> is
+used, the load takes O(log N) for each add, O (NlogN) in all. For O(1) words
+being checked, each takes O(1) or O(logN) for checking with the dictionary,
+and otherwise just O(1) processing. This is negligable compared to the 
+dictionary load, so the total is O(N) or O(Nlog N) depending on whether
+the dictionary is held in a HashMap or TreeMap. 
+
+
+
+
+
+

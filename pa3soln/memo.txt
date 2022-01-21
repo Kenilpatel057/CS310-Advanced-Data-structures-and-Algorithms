@@ -1,0 +1,49 @@
+1. Discuss your experiences in writing these programs.  What was the hardest 
+   part for you?  Are you now a recursion expert?
+   ----------------------------------------------------------------------------
+   My experience implementing most of the java files was pretty simple as 
+   TicTacToe and Nim are very similar and trying to compile them showed me 
+   where most of the things to change were.  I attempted the challenge section,
+   but ended up running out of time. I did not understand how to how I am supposed
+   to create an iterator factory in PlayGame to find the best next position.  
+   As far as the core assignment went, the hardest part was finding the best 
+   move for Nim.  I tried to copy the method used by TicTacToc, but I kept on 
+   getting a move that was suboptimal.  There was a disconnect with the dynamic
+   programming method that TicTacToe used and my simpler implementation that 
+   did not use dynamic programming.  I ended up modifying positionValue(int)
+   from TicTacToe and that helped me find the move to take.  I would not 
+   necessarily call my self a recursion expert, but I am certainly more 
+   comfortable using recursion from my experince finding the best move possible
+   for Nim.  
+
+2. It is well known that the first player in 5-3-1 Nim has a winning strategy
+   by picking 3 stars from row 1 (our row 0). What does this mean for the
+   value of the initial position in Nim?  What is the initial position value
+   for TicTacToe? What does that mean?
+   ----------------------------------------------------------------------------
+   This means that the value of the initial position in Nim is COMPUTER_WIN, or
+   specifically 3 since the computer moves first every game in our game mode.
+   The initial value of TicTacToe would be DRAW, or specifically 1. For
+   TicTacToe, this means if both sides play optimally, neither side wins.
+
+
+3. How many game states are there in Nim (upper bound, like 3^9 for tic tac 
+   toe)? Don't forget that the full game state includes whose turn it is. What 
+   is the height of the full game tree? (Don't try to draw the whole tree! Just 
+   think about the longest possible game.)
+   ----------------------------------------------------------------------------
+   The number of game states is much smaller for Nim than for TicTacToe. There
+   are (6 possibilities for row 0)*(4 for row 1)*(2 for row 2)*(2 nextPlayer values).
+   This totals to 96 possible game states for nim.  The height of the game
+   tree would be 9 for our 5-3-1 nim game.  This is because in the worst case
+   each person only takes 1 stick on their turn.
+
+
+
+4. We could use dynamic programming for Nim. What should the Position class
+   contain in that case?
+   ----------------------------------------------------------------------------
+   If we used dynammic programming for Nim, the Position class would contain
+   the int array used for the heap and the nextPlayer value. It would also contain, 
+   methods for equals(Object o) and hashcode() so the Position objects can be used with a
+   Hashmap<Position, Integer>.

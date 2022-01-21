@@ -1,0 +1,67 @@
+
+
+1. These programs were somewhat challenging to write but also very good review.
+With problems that are more 
+complicated I wish I could sit and think about then for a few days.
+ That is not the case with school work because in order to understand the 
+ problem I have to play with the code to figure out the best implementation 
+ for it. By the time the code is mounted and half way done then I can 
+ see the intricacies in the different objects and classes that make the code messy. 
+
+I used Eclipse and sometimes notepad. I developed on windows and debugged it locally.
+ The only problems I had were with setting up the classes to start with: what
+ are the instance variables, etc.
+
+
+2. LineUsage uses HashMap<String, Integer>  For each line of input, 
+we need to look up the username by get, T(N) = O(1), and increment count, also O(1), so 
+O(1) in all for an input line.
+So for N input lines, it's T(N) = O(N)
+
+3. Directories:
+by tree on Windows:
+F:\cs\cs310\cs310pa0soln>tree
+Folder PATH listing
+Volume serial number is A081-715F
+F:.
+├───bin
+└───src
+
+Note: this tree output uses non-ASCII characters, so may print out badly, but 
+should show the bin and src directory names.
+
+by du on Linux or Mac: (here actually Windows with Linux tools)
+
+F:\cs\cs310\cs310pa0soln>du
+7       ./bin
+5       ./src
+15      .
+
+Compile and run:
+F:\cs\cs310\cs310pa0soln>cd src
+
+F:\cs\cs310\cs310pa0soln\src>javac *.java
+
+F:\cs\cs310\cs310pa0soln\src>ls
+LineReport.class     LineUsage.class      TestLineUsage.class  Usage.class          test.txt
+LineReport.java      LineUsage.java       TestLineUsage.java   Usage.java
+
+F:\cs\cs310\cs310pa0soln\src>java LineReport < test.txt
+Line    Most Common User        Count
+1       NONE    0
+2       NONE    0
+3       NONE    0
+4       NONE    0
+5       NONE    0
+6       NONE    0
+7       NONE    0
+8       NONE    0
+9       ALTEREGO        1
+10      NONE    0
+...
+
+
+
+
+
+
